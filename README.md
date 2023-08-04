@@ -5,7 +5,9 @@ At the moment Insightface have only released the 128x128 model so the results ca
 # Installation
 
 cd <comfyui_root>/custom_nodes/
+
 git clone https://github.com/imb101/ComfyUI-FaceSwap
+
 re-start comfyui and it should install all the bits to work
 
 # Usage
