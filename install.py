@@ -15,7 +15,7 @@ import platform
 import folder_paths
 from torchvision.datasets.utils import download_url
 
-print("### ComfyUI-FaceSwapper: Check dependencies")
+print("### ComfyUI-FaceSwap: Check dependencies")
 
 if "python_embeded" in sys.executable or "python_embedded" in sys.executable:
     pip_install = [sys.executable, '-s', '-m', 'pip', 'install']
@@ -33,10 +33,9 @@ def ensure_pip_packages():
 def install():
     ensure_pip_packages()
     # Download model
-    print("### ComfyUI-Impact-Pack: Check basic models")
+    print("### ComfyUI-FaceSwap: Check basic models")
     model_path = folder_paths.models_dir
     onnx_path = os.path.join(model_path, "roop")
 
     if not os.path.exists(onnx_path):
         download_url("https://huggingface.co/henryruhs/roop/resolve/main/inswapper_128.onnx", onnx_path)
-
